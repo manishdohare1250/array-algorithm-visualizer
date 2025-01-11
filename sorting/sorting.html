@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pages.css">
+    <link rel="stylesheet" href="./canvas.css">
+    <title>Sorting Visualizer</title>
+</head>
+
+<body>
+
+    <div class="left">
+        <div class="logo"><a href="../index.html">Algorithm Visualizer</a></div>
+        <select name="algorithm" id="algorithm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+            <option value="heap">Heap Sort</option>
+        </select>
+        <div class="tab">
+            <div class="tab-buttons">
+                <button class="tablinks" onclick="openTab(event, 'pseudocode')">Pseudocode</button>
+                <button class="tablinks" onclick="openTab(event, 'complexities')">Complexities</button>
+            </div>
+            <div class="content">
+                <div id="pseudocode" class="tabcontent">
+                </div>
+                <div id="complexities" class="tabcontent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-nav">
+            <div class="controls">
+                <div class="usr-input">
+                    <label for="size">Size</label>
+                    <input type="range" name="size" id="size" min="10" max="50" value="25">
+                </div>
+
+                <div class="usr-input">
+                    <label for="speed">Speed</label>
+                    <input type="range" name="speed" id="speed" min="0" max="5" value="2">
+                </div>
+                <button id="generate">Randomize</button>
+            </div>
+            <button id="start">Start</button>
+        </div>
+        <div class="canvas"></div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/algoInfo.js"></script>
+    <script src="../tab-script.js"></script>
+    <script src="./scripts/visualize.js"></script>
+    <script src="./scripts/bubble.js"></script>
+    <script src="./scripts/insertion.js"></script>
+    <script src="./scripts/selection.js"></script>
+    <script src="./scripts/merge.js"></script>
+    <script src="./scripts/quick.js"></script>
+    <script src="./scripts/heap.js"></script>
+
+</body>
+
+</html>
